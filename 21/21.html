@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <h1>Arrow Functions</h1>
+    <script>
+        // Sin parámetros
+        // const saludar = () => console.log("Hola")
+        // saludar()
+       
+        // Con un parámetro
+       const saludar = nombre => console.log(`Hola ${nombre}`)
+       saludar("Paola")
+        
+       // Con dos parámetros
+       const sumar = (a, b) => a + b
+       console.log(sumar(7, 8))
+
+       const funcionDeVariasLineas = () => {
+           console.log("Uno")
+           console.log("Dos")
+           console.log("Tres")
+       }
+       funcionDeVariasLineas()
+
+       const numeros = [1, 2, 3, 4, 5]
+       numeros.forEach((el, index) => console.log(`${el} está en la posición ${index}`))
+       
+    </script>
+</body>
+</html>
