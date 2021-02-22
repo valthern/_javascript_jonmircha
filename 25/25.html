@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clases y Herencia</title>
+    <title>Métodos estáticos, getters y setters</title>
 </head>
 <body>
-    <h1>Clases y Herencia</h1>
+    <h1>Métodos estáticos, getters y setters</h1>
     <script>
 
         class Animal{
@@ -32,6 +32,7 @@
                 // constructor de la clase padre
                 super(nombre, genero)
                 this.tamanio = tamanio
+                this.raza = null
             }
             sonar(){
                 console.log("Soy un perro y mi sonido es un ladrido")
@@ -39,7 +40,23 @@
             ladrar(){
                 console.log("Guauuu, Guauuu!!!")
             }
+            // Un método estático se puede ejecutar sin necesidad de
+            // instanciar la clase
+            static queEres(){
+                console.log("Los perros somos animales mamíferos que pertenecemos a la familia de los caninos. Somos considerados los mejores amigos del hombre.")
+            }
+            // Los setters y getters son métodos especiales que 
+            // nos permiten establecer y obtener los valores de 
+            // atributos de nuestra clase
+            get getRaza(){
+                return this.raza
+            }
+            set setRaza(raza){
+                this.raza = raza
+            }
         }
+
+        Perro.queEres()
 
         const mimi = new Animal("Mimí", "Hembra"),
             scooby = new Perro("Scooby", "Macho", "Gigante")
@@ -51,6 +68,10 @@
         scooby.saludar()
         scooby.sonar()
         scooby.ladrar()
+        console.log(scooby.getRaza)
+        scooby.setRaza = "Gran Danés"
+        console.log(scooby.getRaza)
+
     </script>
 </body>
 </html>
