@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Date</title>
+</head>
+<body>
+    <h1>Objeto Date</h1>
+    <script>
+
+        let fecha = new Date()
+        console.log(fecha)
+        console.log(fecha.getDate())
+        // Día de la semana:
+        // D L Ma Mi J V S
+        // 0 1  2  3 4 5 6
+        console.log(fecha.getDay())
+        // Mes:
+        // Ene Feb Mar Abr May Jun Jul Ago Sep Oct Nov Dic
+        //   0   1   2   3   4   5   6   7   8   9  10  11
+        console.log(fecha.getMonth())
+        console.log(fecha.getFullYear())
+        console.log(fecha.getHours())
+        console.log(fecha.getMinutes())
+        console.log(fecha.getSeconds())
+        console.log(fecha.getMilliseconds())
+        console.log(fecha.toString())
+        console.log(fecha.toDateString())
+        console.log(fecha.toLocaleString())
+        console.log(fecha.toLocaleDateString())
+        console.log(fecha.toLocaleTimeString())
+        console.log(fecha.getTimezoneOffset())
+        console.log(fecha.getUTCDate())
+        console.log(fecha.getUTCHours())
+        console.log(Date.now())
+        let cumpleOmar = new Date(1978, 1, 26)
+        console.log(cumpleOmar)
+    </script>
+</body>
+</html>
