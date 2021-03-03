@@ -10,16 +10,31 @@ function contarChar(param) {
         case "object":
             let suma = 0
             Object.values(param).forEach(elem => {
-                if (typeof param !== "function") {
+                if (typeof elem !== "function") {
                     suma += elem.toString().length
                 }
             })
             return suma
         default:
-            return -1
+            return 0
     }
 }
 
+let yo = {
+    nombre: "Omar",
+    apellido: "Martínez",
+    programar(){
+        console.log("Programando...")
+    }
+}
+
+console.log(contarChar(yo))
+
+
 // 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+function recortarStr(param) {
+    
+}
+
 // 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
 // 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
