@@ -20,7 +20,7 @@ function contarChar(param) {
     }
 }
 
-let yo = {
+const yo = {
     nombre: "Omar",
     apellido: "Martínez",
     programar(){

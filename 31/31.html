@@ -108,13 +108,21 @@ A cras semper auctor neque vitae. Dignissim diam quis enim lobortis scelerisque 
 
 Sed egestas egestas fringilla phasellus. Scelerisque purus semper eget duis at tellus at. Sit amet aliquam id diam maecenas ultricies mi eget. Placerat duis ultricies lacus sed turpis tincidunt id aliquet risus. Varius duis at consectetur lorem donec massa sapien. Accumsan in nisl nisi scelerisque eu ultrices. Tristique senectus et netus et. Vitae purus faucibus ornare suspendisse sed. Enim tortor at auctor urna nunc id cursus. Nec tincidunt praesent semper feugiat nibh sed pulvinar. Interdum posuere lorem ipsum dolor. Quam id leo in vitae turpis massa sed elementum tempus.`
 
-        // let expReg1 = new RegExp("lorem","ig")
+        // let expReg1 = new RegExp("lorem", "ig")
         // console.log(expReg1.test(cadena))
         // console.log(expReg1.exec(cadena))
 
         let expReg2 = /lorem/ig
         console.log(expReg2.test(cadena))
         console.log(expReg2.exec(cadena))
+
+        let cadena3 = "adbgda*b a*cbdbr bdc**a *afrda a*bfdda*b rgsqo* * *bgda *abg"
+        let expReg3 = new RegExp("a\\*b", "i")
+        // let expReg3 = /a\*b/i
+
+        console.log(expReg3.test(cadena3))
+        console.log(expReg3.exec(cadena3))
+
     </script>
 </body>
 </html>
