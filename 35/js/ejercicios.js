@@ -40,17 +40,47 @@ const contarPalabras = function(cadena, expReg){
 
 contarPalabras("adbgda*b a*cbdbr bdc**a *afrda a*bfdda*b rgsqo* * *bgda *abg", "a\\*b")
 
+
+
 // 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
-function validarPalindromo(cadena) {
+function esPalindromo(cadena) {
     if(typeof cadena !== "string") return console.error("Se debe introducir una cadena de texto en el parámetro cadena")
     if(cadena.length == 0) return console.warn("cadena no debe ser una cadena de texto vacía")
 
-    let j = cadena.length - 1
-    for (let i = 0; i < cadena.length; i++) {
-        const charIni = cadena[i];
-        const charFin = cadena[j];
+    let expReg = /\s/g
+    let cad = cadena.replace(expReg, '')
+    let i = 0
+    let j = cad.length - 1
+    while (i <= j) {
+        const charIni = cad[i].toLowerCase()
+        const charFin = cad[j].toLowerCase()
+        if (charIni == charFin) {
+            i++
+            j--
+            continue
+        } else {
+            return false
+        }
     }
+
+    return true
 }
+
+console.log(esPalindromo("Dabale arroz a la zorra el abad"))
+
 
 
 // 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+function eliminaPatron(cadena, expReg) {
+    if(typeof cadena !== "string") return console.error("Se debe introducir una cadena de texto en el parámetro cadena")
+    if(cadena.length == 0) return console.warn("cadena no debe ser una cadena de texto vacía")
+    if(typeof expReg !== "string") return console.error("Se debe introducir una cadena de texto en el parámetro buscar")
+    if(expReg.length == 0) return console.warn("buscar no debe ser una cadena de texto vacía")
+    
+    let er = new RegExp(expReg, 'gi')
+    let cad = cadena.replace(er, '')
+
+    return console.info(cad)
+}
+
+eliminaPatron("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz")
