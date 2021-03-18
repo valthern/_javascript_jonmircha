@@ -43,7 +43,7 @@ contarPalabras("adbgda*b a*cbdbr bdc**a *afrda a*bfdda*b rgsqo* * *bgda *abg", "
 
 
 // 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
-function esPalindromo(cadena) {
+const esPalindromo = function (cadena) {
     if(typeof cadena !== "string") return console.error("Se debe introducir una cadena de texto en el parámetro cadena")
     if(cadena.length == 0) return console.warn("cadena no debe ser una cadena de texto vacía")
 
