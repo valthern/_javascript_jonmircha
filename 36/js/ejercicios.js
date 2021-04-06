@@ -1,7 +1,5 @@
 // 9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
-const aleatorio501_600 = function () {
-    return console.info(Math.round(Math.random() * (600 - 501)) + 501)
-}
+const aleatorio501_600 = () => console.info(Math.round(Math.random() * (600 - 501)) + 501)
 
 aleatorio501_600()
 aleatorio501_600()

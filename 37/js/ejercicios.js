@@ -1,12 +1,12 @@
 // 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
-const esPrimo = (numero) => {
+const esPrimo = (numero = undefined) => {
     if(numero === undefined) return console.warn("El parámetro \'numero\' debe recibir un valor numérico.")
     if(typeof numero !== "number" && typeof numero !== "bigint") return console.error("El parámetro \'numero\' debe ser de tipo numérico.")
     if(numero < 2) return console.error("El parámetro \'numero\' debe ser un número positivo mayor o igual a dos.")
     if(numero % 1 !== 0) return console.error("El parámetro \'numero\' debe ser un número entero")
 
     for(let i = numero - 1; i >= 2; i--){
-        if (numero % i == 0) {
+        if (numero % i === 0) {
             return false
         }
     }
@@ -14,12 +14,12 @@ const esPrimo = (numero) => {
     return true
 }
 
-console.log(esPrimo(25))
+console.log(esPrimo(37))
 
 
 
 // 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
-const esParOImpar = (numero) => {
+const esParOImpar = (numero = undefined) => {
     if(numero === undefined) return console.warn("El parámetro \'numero\' debe recibir un valor numérico.")
     if(typeof numero !== "number" && typeof numero !== "bigint") return console.error("El parámetro \'numero\' debe ser de tipo numérico.")
     if(numero % 1 !== 0) return console.error("El parámetro \'numero\' debe ser un número entero")
@@ -32,7 +32,7 @@ esParOImpar(8)
 
 
 // 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
-const convertirGrados = (grados, escala) => {
+const convertirGrados = (grados = undefined, escala = undefined) => {
     if(grados === undefined) return console.warn("El parámetro \'grados\' debe recibir un valor numérico.")
     if(typeof grados !== "number" && typeof grados !== "bigint") return console.error("El parámetro \'grados\' debe ser de tipo numérico.")
     if(typeof escala !== "string") return console.error("El parámetro \'escala\' debe recibir un valor de tipo string")
