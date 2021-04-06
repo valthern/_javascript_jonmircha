@@ -24,7 +24,7 @@ const esParOImpar = (numero = undefined) => {
     if(typeof numero !== "number" && typeof numero !== "bigint") return console.error("El parámetro \'numero\' debe ser de tipo numérico.")
     if(numero % 1 !== 0) return console.error("El parámetro \'numero\' debe ser un número entero")
 
-    console.info((numero % 2 == 0) ? 'Par' : 'Impar')
+    console.info((numero % 2 === 0) ? 'Par' : 'Impar')
 }
 
 esParOImpar(8)
