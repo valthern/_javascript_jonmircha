@@ -19,7 +19,7 @@ const convertirBase = (numero = undefined, base = undefined) => {
         while (dividendo >= divisor) {
             cociente = Math.trunc(dividendo / divisor)
             residuo = dividendo % divisor
-            console.log(`${cociente} ${residuo}`)
+            //console.log(`${cociente} ${residuo}`)
             dividendo = cociente
             binarioArr[i++] = residuo
         }
@@ -33,9 +33,25 @@ const convertirBase = (numero = undefined, base = undefined) => {
 
 convertirBase(1000101110, 2)
 convertirBase(110000100100101, 2)
+convertirBase(4096, 10)
 
 
 
 // 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
+const calculaDescuento = (cantidad = undefined, descuento = undefined) => {
+    if(cantidad === undefined) return console.warn("El parámetro \'cantidad\' debe recibir un valor numérico")
+    if(descuento === undefined) return console.warn("El parámetro \'descuento\' debe recibir un valor numérico")
+    if(typeof cantidad !== "number" && typeof cantidad !== "bigint") return console.error("El parámetro \'cantidad\' debe ser de tipo numérico")
+    if(typeof descuento !== "number") return console.error("El parámetro \'descuento\' debe ser de tipo numérico")
+    if(descuento < 0 || descuento > 100) return console.error("El parámetro \'descuento\' debe estar comprendido entre 0 y 100")
+
+    let bueno = 100 - descuento
+    return bueno * cantidad / 100
+}
+
+console.log(calculaDescuento(1000, 20))
+console.log(calculaDescuento(5230, 10))
+
+
 
 // 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
